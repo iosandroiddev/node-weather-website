@@ -14,9 +14,9 @@ const _getWeatherForecast = (latitude, longitude, forecastCallback) => {
         } else {
             const _data = body.current
             if (_data.weather_descriptions.length == 0) {
-                forecastCallback(undefined, 'It\'s currently ' + _data.temperature + ' degrees out. It feels like ' + _data.feelslike + ' degress out')
+                forecastCallback(undefined, 'It\'s currently ' + _data.temperature + ' degrees out. It feels like ' + _data.feelslike + ' degress out. The humidity is ' +_data.humidity + '.')
             } else {
-                forecastCallback(undefined, _data.weather_descriptions[0] + '. It\'s currently ' + _data.temperature + ' degrees out. It feels like ' + _data.feelslike + ' degress out')
+                forecastCallback(undefined, _data.weather_descriptions[0] + '. It\'s currently ' + _data.temperature + ' degrees out. It feels like ' + _data.feelslike + ' degress out. The humidity is ' +_data.humidity + '.')
             }
         }
     })
